@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const CalcularDescontoUseCase_1 = require("./CalcularDescontoUseCase");
+const Cliente_1 = require("./Cliente");
+const Pedido_1 = require("./Pedido");
+const cliente = new Cliente_1.Cliente("igor", []);
+const pedido = new Pedido_1.Pedido(10, cliente);
+const calculadora = new CalcularDescontoUseCase_1.CalcularDescontoUseCase();
+const desconto = calculadora.calcularDesconto(pedido);
+console.log(`o desconto para o pedido é ${desconto}`);

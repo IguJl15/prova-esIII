@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Transacao_1 = require("./Transacao");
+const transacaoRepository_1 = require("./transacaoRepository");
+const repo = new transacaoRepository_1.TransacaoRepository("./transacao.txt");
+const transacao = new Transacao_1.Pagamento(10, new Date());
+console.log(`taxa: ${transacao.calcularTaxa()}`);
+repo.salvarTransacao(transacao);
+const transacaoSalva = repo.lerTransacao();
+console.log(transacaoSalva);

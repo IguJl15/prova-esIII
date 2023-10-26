@@ -1,0 +1,1 @@
+{"valor":10,"data":"2023-10-26T20:29:22.156Z","discriminator":"Pagamento"}
